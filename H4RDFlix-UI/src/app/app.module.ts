@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { ShowcaseComponent } from './componentes/showcase/showcase.component';
     ShowcaseComponent
   ],
   imports: [
+    MatCarouselModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
