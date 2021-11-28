@@ -1,13 +1,81 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
   </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+  <a routerLink="home-menu" (click)="showCaseComponente()">H4RDFlix</a>
+
+  <div class="flex-stretch"></div>
+
+  <mat-icon class="mr-8">brightness_5</mat-icon>
+  <mat-slide-toggle
+    [formControl]="toggleControl"
+    class="mr-8"
+  ></mat-slide-toggle>
+  <mat-icon>bedtime</mat-icon>
 </mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" mode="over">
+
+    <button mat-button class="menu-button">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>playlist_play</mat-icon>
+      <span>Playlists</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>favorite</mat-icon>
+      <span>Favorites</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>movie</mat-icon>
+      <span>Movies</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>ondemand_video</mat-icon>
+      <span>Series</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>live_tv</mat-icon>
+      <span>Documentaries</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>connected_tv</mat-icon>
+      <span>Animes</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>cast_for_education</mat-icon>
+      <span>Education</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>music_video</mat-icon>
+      <span>Music Video</span>
+    </button>
+
+    <button mat-button class="menu-button">
+      <mat-icon>tv</mat-icon>
+      <span>TV</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
