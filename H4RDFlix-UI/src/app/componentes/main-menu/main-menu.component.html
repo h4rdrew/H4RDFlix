@@ -11,12 +11,9 @@
 
   <div class="flex-stretch"></div>
 
-  <mat-icon class="mr-8">brightness_5</mat-icon>
-  <mat-slide-toggle
-    [formControl]="toggleControl"
-    class="mr-8"
-  ></mat-slide-toggle>
-  <mat-icon>bedtime</mat-icon>
+  <button mat-icon-button>
+    <mat-icon>search</mat-icon>
+  </button>
 </mat-toolbar>
 
 <mat-sidenav-container>
@@ -73,6 +70,15 @@
       <mat-icon>tv</mat-icon>
       <span>TV</span>
     </button>
+
+    <mat-divider></mat-divider>
+
+    <mat-icon class="mr-8">brightness_5</mat-icon>
+    <mat-slide-toggle
+      [formControl]="toggleControl"
+      class="mr-8"
+    ></mat-slide-toggle>
+    <mat-icon>bedtime</mat-icon>
 
   </mat-sidenav>
   <mat-sidenav-content class="content">
