@@ -1,3 +1,7 @@
+<div>
+  <img class="img-Selected" src="{{ imgSelected[0] }}" alt="" />
+</div>
+
 <swiper
   [slidesPerView]="'auto'"
   [spaceBetween]="5"
@@ -7,7 +11,12 @@
   [pagination]="false"
   class="mySwiper"
 >
-  <ng-template swiperSlide *ngFor="let img of imgShowCase">
-    <img class="img-ShowCase" src="{{ img }}" alt="" (click)="teste(img)"/>
+  <ng-template swiperSlide *ngFor="let media of medias">
+    <img
+      class="img-ShowCase"
+      src="{{ media.imgCover }}"
+      alt=""
+      (click)="teste(media.guid)"
+    />
   </ng-template>
 </swiper>
