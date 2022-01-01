@@ -5,14 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowcaseComponent } from './componentes/showcase/showcase.component';
+import { SwiperModule } from 'swiper/angular';
+import { SwiperImportModule } from './swiper-imports/swiper-imports.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ShowcaseComponent
-  ],
+  declarations: [AppComponent, ShowcaseComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,8 +19,10 @@ import { ShowcaseComponent } from './componentes/showcase/showcase.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    SwiperModule,
+    SwiperImportModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
