@@ -8,6 +8,6 @@
   class="mySwiper"
 >
   <ng-template swiperSlide *ngFor="let img of imgShowCase">
-    <img class="img-ShowCase" src="{{ img }}" alt="" />
+    <img class="img-ShowCase" src="{{ img }}" alt="" (click)="teste(img)"/>
   </ng-template>
 </swiper>
