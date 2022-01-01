@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-showcase',
@@ -7,14 +6,11 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./showcase.component.scss'],
 })
 export class ShowcaseComponent implements OnInit {
+  imgShowCase = [101, 102, 103, 104, 105, 106, 107, 108, 109].map(
+    (n) => `assets/imagem/mainShowCase/${n}.jpg`
+  );
+
   constructor() {}
 
   ngOnInit(): void {}
-
-  onSwiper(swiper: any) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
 }
