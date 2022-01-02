@@ -1,5 +1,17 @@
-<div>
-  <img class="img-Selected" src="{{ imgSelected[0] }}" alt="" />
+<div style="display: flex">
+  <div style="width: 50%">
+    <p>{{ media.rating }}/10</p>
+    <p>{{ media.ano }}</p>
+    <p>
+      {{ media.descricao }}
+    </p>
+    <span *ngFor="let person of media.stars">
+      {{ searchPerson(person) }}
+    </span>
+  </div>
+  <div>
+    <img class="img-Selected" src="{{ media.imgBackground }}" alt="" />
+  </div>
 </div>
 
 <swiper
@@ -9,6 +21,7 @@
   [freeMode]="true"
   [loop]="true"
   [pagination]="false"
+  [grabCursor]="true"
   class="mySwiper"
 >
   <ng-template swiperSlide *ngFor="let media of medias">

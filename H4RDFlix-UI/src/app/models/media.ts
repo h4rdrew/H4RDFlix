@@ -8,18 +8,25 @@ export enum Categoria {
   tv = 7,
 }
 
+export enum Genero {
+  Action = 1,
+  Adventure = 2,
+  Fantasy = 3,
+  SiFi = 4,
+}
+
 export class MediaModel {
   guid: string;
   nome: string;
   ano: string;
   duracao: string;
-  genero: string;
+  genero: Genero[];
   descricao: string;
   categoria: Categoria;
   rating: number;
-  director: string;
-  writer: string;
-  stars: string;
+  director: string[];
+  writer: string[];
+  stars: string[];
   season: number;
   imgCover: string;
   imgBackground: string;
@@ -44,13 +51,13 @@ export class MediaModel {
     nome: string;
     ano: string;
     duracao: string;
-    genero: string;
+    genero: Genero[];
     descricao: string;
     categoria: Categoria;
     rating: number;
-    director: string;
-    writer: string;
-    stars: string;
+    director: string[];
+    writer: string[];
+    stars: string[];
     season: number;
     imgCover: string;
     imgBackground: string;
