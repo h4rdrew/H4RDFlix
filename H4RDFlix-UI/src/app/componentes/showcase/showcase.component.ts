@@ -41,17 +41,17 @@ export class ShowcaseComponent implements OnInit {
     {
       guid: 'guidPerson005',
       nome: 'Mark Hamill',
-      mediaGuid: ['mediaGuid004', 'mediaGuid005'],
+      mediaGuid: ['mediaGuid004', 'mediaGuid005', 'mediaGuid006'],
     },
     {
       guid: 'guidPerson006',
       nome: 'Harrison Ford',
-      mediaGuid: ['mediaGuid004', 'mediaGuid005'],
+      mediaGuid: ['mediaGuid004', 'mediaGuid005', 'mediaGuid006'],
     },
     {
       guid: 'guidPerson007',
       nome: 'Carrie Fisher',
-      mediaGuid: ['mediaGuid004', 'mediaGuid005'],
+      mediaGuid: ['mediaGuid004', 'mediaGuid005', 'mediaGuid006'],
     },
     {
       guid: 'guidPerson008',
@@ -214,7 +214,7 @@ export class ShowcaseComponent implements OnInit {
       rating: 8.6,
       director: ['guidPerson011'],
       writer: ['guidPerson011'],
-      stars: ['guidPerson005', 'guidPerson006', 'guidPerson007,'],
+      stars: ['guidPerson005', 'guidPerson006', 'guidPerson007'],
       season: 0,
       imgCover: this.imgShowCase[3],
       imgBackground: this.imgSelected[3],

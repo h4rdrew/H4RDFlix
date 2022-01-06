@@ -1,13 +1,39 @@
 <div style="display: flex">
   <div style="width: 50%">
-    <p>{{ media.rating }}/10</p>
-    <p>{{ media.ano }}</p>
+    <div class="divMain-align-icon-text">
+      <div class="divChild-align-icon-text">
+        <mat-icon>star</mat-icon>
+      </div>
+      <div class="divChild-align-icon-text">{{ media.rating }}/10</div>
+
+      <span class="span-space-divider"></span>
+
+      <div class="divChild-align-icon-text">
+        <mat-icon>calendar_today</mat-icon>
+      </div>
+      <div class="divChild-align-icon-text">{{ media.ano }}</div>
+    </div>
+<!--
+    <div class="divMain-align-icon-text">
+      <div class="divChild-align-icon-text">
+        <mat-icon>calendar_today</mat-icon>
+      </div>
+      <div class="divChild-align-icon-text">{{ media.ano }}</div>
+    </div> -->
+
     <p>
       {{ media.descricao }}
     </p>
-    <span *ngFor="let person of media.stars">
-      {{ searchPerson(person) }}
-    </span>
+    <div *ngFor="let person of media.stars">
+      <div class="divMain-align-icon-text">
+        <div class="divChild-align-icon-text">
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="divChild-align-icon-text">
+          {{ searchPerson(person) }}
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <img class="img-Selected" src="{{ media.imgBackground }}" alt="" />
