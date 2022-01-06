@@ -27,24 +27,68 @@
   height: 322px;
 }
 
-.img-Selected{
+.img-Selected {
   width: 750px;
   height: 390px;
 }
 
-.divMain-align-icon-text{
+.divMain-align-icon-text {
   display: flex;
   width: max-content;
   padding-bottom: 5px;
   padding-left: 15px;
 }
 
-.divChild-align-icon-text{
+.divChild-align-icon-text {
   margin: auto;
   vertical-align: middle;
   padding-right: 5px;
 }
 
-.span-space-divider{
+.span-space-divider {
   padding-right: 10px;
 }
+
+//-----------------------
+
+#shop {
+  background-repeat: repeat-x;
+  // height: 121px;
+  width: 240px;
+  // margin-left: 20px;
+  // margin-top: 13px;
+
+
+
+  .content {
+    width: 182px;
+    /* height: 121px; */
+    /* line-height: 20px; */
+    /* margin-top: 0px; */
+    /* margin-left: 9px; */
+    /* margin-right: 0px; */
+    display: inline-block;
+    position: relative;
+
+    .infoTeste {
+      display: none;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      background: blue;
+      color: #fff;
+    }
+
+    // .content:hover, .infoTeste {
+    //   display: inline-block;
+    //   // background: red;
+    // }
+  }
+
+
+}
+
+
+
+
+

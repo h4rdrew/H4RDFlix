@@ -13,7 +13,7 @@
       </div>
       <div class="divChild-align-icon-text">{{ media.ano }}</div>
     </div>
-<!--
+    <!--
     <div class="divMain-align-icon-text">
       <div class="divChild-align-icon-text">
         <mat-icon>calendar_today</mat-icon>
@@ -47,15 +47,20 @@
   [freeMode]="true"
   [loop]="true"
   [pagination]="false"
-  [grabCursor]="true"
+  [grabCursor]="false"
   class="mySwiper"
 >
   <ng-template swiperSlide *ngFor="let media of medias">
-    <img
-      class="img-ShowCase"
-      src="{{ media.imgCover }}"
-      alt=""
-      (click)="teste(media.guid)"
-    />
+    <div id="shop">
+      <div class="content">
+        <img
+          class="img-ShowCase"
+          src="{{ media.imgCover }}"
+          alt=""
+          (click)="teste(media.guid)"
+        />
+        <a class="infoTeste">Counter-Strike 1.6 Steam</a>
+      </div>
+    </div>
   </ng-template>
 </swiper>
