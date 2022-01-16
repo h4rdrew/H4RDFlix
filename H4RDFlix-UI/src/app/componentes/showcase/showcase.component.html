@@ -51,7 +51,7 @@
   class="mySwiper"
 >
   <ng-template swiperSlide *ngFor="let media of medias">
-    <div id="shop">
+    <div class="shop">
       <div class="content">
         <img
           class="img-ShowCase"
@@ -59,7 +59,19 @@
           alt=""
           (click)="teste(media.guid)"
         />
-        <a class="infoTeste">Counter-Strike 1.6 Steam</a>
+        <div class="infoTeste">
+          <div class="mediaHover-content">
+            <button mat-fab class="btn-actions">
+              <mat-icon class="mat-18">play_arrow</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon class="mat-18">favorite</mat-icon>
+            </button>
+            <button mat-icon-button>
+              <mat-icon class="mat-18">playlist_add</mat-icon>
+          </button>
+          </div>
+        </div>
       </div>
     </div>
   </ng-template>

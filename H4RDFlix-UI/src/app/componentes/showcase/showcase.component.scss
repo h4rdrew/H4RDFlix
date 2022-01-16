@@ -51,22 +51,12 @@
 
 //-----------------------
 
-#shop {
+.shop {
   background-repeat: repeat-x;
-  // height: 121px;
   width: 240px;
-  // margin-left: 20px;
-  // margin-top: 13px;
-
-
 
   .content {
     width: 182px;
-    /* height: 121px; */
-    /* line-height: 20px; */
-    /* margin-top: 0px; */
-    /* margin-left: 9px; */
-    /* margin-right: 0px; */
     display: inline-block;
     position: relative;
 
@@ -74,21 +64,23 @@
       display: none;
       position: absolute;
       bottom: 5px;
-      right: 5px;
-      background: blue;
-      color: #fff;
-    }
+      width: 121%;
+      height: 80px;
+      background-image: linear-gradient(#00000000 5%, #000000);
+      color: white;
 
-    // .content:hover, .infoTeste {
-    //   display: inline-block;
-    //   // background: red;
-    // }
+      .mediaHover-content {
+        padding: 10px;
+
+        .btn-actions {
+          background: white;
+          color: black;
+        }
+      }
+    }
   }
 
-
+  :hover .infoTeste {
+    display: inline-block;
+  }
 }
-
-
-
-
-
