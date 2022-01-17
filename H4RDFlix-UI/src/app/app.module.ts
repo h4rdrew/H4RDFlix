@@ -9,9 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowcaseComponent } from './componentes/showcase/showcase.component';
 import { SwiperModule } from 'swiper/angular';
 import { SwiperImportModule } from './swiper-imports/swiper-imports.module';
+import { VideoComponent } from './componentes/video/video.component';
 
 @NgModule({
-  declarations: [AppComponent, ShowcaseComponent],
+  declarations: [AppComponent, ShowcaseComponent, VideoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

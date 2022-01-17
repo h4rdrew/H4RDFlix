@@ -1,7 +1,7 @@
 import { PersonModel } from './../../models/person';
 import { MediaModel } from './../../models/media';
-import { Component, OnInit } from '@angular/core';
-import { v4 as uuidv4 } from 'uuid';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-showcase',
@@ -317,10 +317,10 @@ export class ShowcaseComponent implements OnInit {
 
   media: MediaModel = this.medias[0];
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    console.log(this.medias[0].stars)
+    console.log(this.medias[0].stars);
   }
 
   teste(guid: string) {
@@ -334,5 +334,19 @@ export class ShowcaseComponent implements OnInit {
     let person = this.people.find((c) => c.guid === guid);
     if (person === undefined) return '';
     return person.nome;
+  }
+
+  @ViewChild('templateDialogAddPlaylist')
+  TemplateDialogAddPlaylist!: TemplateRef<any>;
+  openDialogAddPlaylist() {
+    const dialogRef = this.dialog.open(this.TemplateDialogAddPlaylist);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        console.log('Sim');
+      } else {
+        console.log('Não');
+      }
+    });
   }
 }

@@ -61,18 +61,35 @@
         />
         <div class="infoTeste">
           <div class="mediaHover-content">
-            <button mat-fab class="btn-actions">
-              <mat-icon class="mat-18">play_arrow</mat-icon>
+            <button mat-fab class="btn-actions" >
+              <mat-icon class="mat-18" routerLink="/video">play_arrow</mat-icon>
             </button>
             <button mat-icon-button>
-                <mat-icon class="mat-18">favorite</mat-icon>
+              <mat-icon class="mat-18">favorite</mat-icon>
             </button>
             <button mat-icon-button>
-              <mat-icon class="mat-18">playlist_add</mat-icon>
-          </button>
+              <mat-icon class="mat-18" (click)="openDialogAddPlaylist()"
+                >playlist_add</mat-icon
+              >
+            </button>
           </div>
         </div>
       </div>
     </div>
   </ng-template>
 </swiper>
+
+<ng-template #templateDialogAddPlaylist>
+  <div class="teste1">
+    <div class="teste2">Salvar em...</div>
+    <button mat-icon-button mat-dialog-close class="teste3">
+      <mat-icon class="mat-18">close</mat-icon>
+    </button>
+  </div>
+  <mat-divider></mat-divider>
+  <section>
+    <div><mat-checkbox>Assistir mais tarde</mat-checkbox></div>
+    <div><mat-checkbox>SWU</mat-checkbox></div>
+    <div><mat-checkbox>MCU</mat-checkbox></div>
+  </section>
+</ng-template>
