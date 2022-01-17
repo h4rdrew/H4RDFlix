@@ -10,6 +10,7 @@ import { ShowcaseComponent } from './componentes/showcase/showcase.component';
 import { SwiperModule } from 'swiper/angular';
 import { SwiperImportModule } from './swiper-imports/swiper-imports.module';
 import { VideoComponent } from './componentes/video/video.component';
+import { PlyrModule } from 'ngx-plyr';
 
 @NgModule({
   declarations: [AppComponent, ShowcaseComponent, VideoComponent],
@@ -22,6 +23,7 @@ import { VideoComponent } from './componentes/video/video.component';
     ReactiveFormsModule,
     SwiperModule,
     SwiperImportModule,
+    PlyrModule
   ],
   providers: [],
   bootstrap: [AppComponent],
