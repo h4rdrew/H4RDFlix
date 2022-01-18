@@ -321,6 +321,16 @@ export class ShowcaseComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.medias[0].stars);
+
+    let teste = document.getElementById('divBackground');
+
+    if (teste === null) return;
+
+    teste.style.height = '100vh';
+    teste.style.width = '100%';
+    teste.style.backgroundImage = `url("${this.medias[0].imgBackground}")`;
+    teste.style.backgroundSize = 'cover';
+    teste.style.color = 'white';
   }
 
   teste(guid: string) {
@@ -328,6 +338,16 @@ export class ShowcaseComponent implements OnInit {
     let media = this.medias.find((c) => c.guid === guid);
     if (media === undefined) return;
     this.media = media;
+
+    let teste = document.getElementById('divBackground');
+
+    if (teste === null) return;
+
+    teste.style.height = '100vh';
+    teste.style.width = '100%';
+    teste.style.backgroundImage = `url("${media.imgBackground}")`;
+    teste.style.backgroundSize = 'cover';
+    teste.style.color = 'white';
   }
 
   searchPerson(guid: string): string {
