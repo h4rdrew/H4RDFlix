@@ -317,20 +317,38 @@ export class ShowcaseComponent implements OnInit {
 
   media: MediaModel = this.medias[0];
 
+  imgSrc: string = '';
+
   constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
     console.log(this.medias[0].stars);
 
-    let teste = document.getElementById('divBackground');
+    this.imgBackground(this.media);
+  }
 
-    if (teste === null) return;
+  imgBackground(media: MediaModel) {
+    let element = document.getElementById('imgShowCase');
 
-    teste.style.height = '100vh';
-    teste.style.width = '100%';
-    teste.style.backgroundImage = `url("${this.medias[0].imgBackground}")`;
-    teste.style.backgroundSize = 'cover';
-    teste.style.color = 'white';
+    if (element === null) return;
+
+    this.imgSrc = media.imgBackground;
+
+    element.style.position = 'absolute';
+    element.style.top = '0';
+    element.style.left = '0';
+    element.style.zIndex = '1';
+    element.style.width = '100%';
+    element.style.height = 'auto';
+
+    // element.src = media.imgBackground;
+
+    // element.style.height = '100vh';
+
+    // element.style.width = '100%';
+    // element.style.backgroundImage = `url("${media.imgBackground}")`;
+    // element.style.backgroundSize = 'cover';
+    // element.style.color = 'white';
   }
 
   teste(guid: string) {
@@ -339,15 +357,7 @@ export class ShowcaseComponent implements OnInit {
     if (media === undefined) return;
     this.media = media;
 
-    let teste = document.getElementById('divBackground');
-
-    if (teste === null) return;
-
-    teste.style.height = '100vh';
-    teste.style.width = '100%';
-    teste.style.backgroundImage = `url("${media.imgBackground}")`;
-    teste.style.backgroundSize = 'cover';
-    teste.style.color = 'white';
+    this.imgBackground(this.media);
   }
 
   searchPerson(guid: string): string {

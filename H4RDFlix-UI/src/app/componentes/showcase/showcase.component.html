@@ -1,4 +1,5 @@
-<div id="divBackground">
+<div class="div-main">
+  <img id="imgShowCase" [src]="imgSrc"/>
   <div class="testeaaa">
     <div class="divMain-align-icon-text">
       <div class="divChild-align-icon-text">
@@ -35,48 +36,49 @@
       </div>
     </div>
   </div>
-  <!-- <div>
-      <img class="img-Selected" src="{{ media.imgBackground }}" alt="" />
-    </div> -->
 
-  <swiper
-    [slidesPerView]="'auto'"
-    [spaceBetween]="5"
-    [centeredSlides]="true"
-    [freeMode]="true"
-    [loop]="true"
-    [pagination]="false"
-    [grabCursor]="false"
-    class="mySwiper"
-  >
-    <ng-template swiperSlide *ngFor="let media of medias">
-      <div class="shop">
-        <div class="content">
-          <img
-            class="img-ShowCase"
-            src="{{ media.imgCover }}"
-            alt=""
-            (click)="teste(media.guid)"
-          />
-          <div class="infoTeste">
-            <div class="mediaHover-content">
-              <button mat-fab class="btn-actions">
-                <mat-icon class="mat-18" routerLink="/video">play_arrow</mat-icon>
-              </button>
-              <button mat-icon-button>
-                <mat-icon class="mat-18">favorite</mat-icon>
-              </button>
-              <button mat-icon-button>
-                <mat-icon class="mat-18" (click)="openDialogAddPlaylist()"
-                  >playlist_add</mat-icon
-                >
-              </button>
+  <div>
+    <swiper
+      [slidesPerView]="'auto'"
+      [spaceBetween]="5"
+      [centeredSlides]="true"
+      [freeMode]="true"
+      [loop]="true"
+      [pagination]="false"
+      [grabCursor]="false"
+      class="mySwiper"
+    >
+      <ng-template swiperSlide *ngFor="let media of medias">
+        <div class="shop">
+          <div class="content">
+            <img
+              class="img-ShowCase"
+              src="{{ media.imgCover }}"
+              alt=""
+              (click)="teste(media.guid)"
+            />
+            <div class="infoTeste">
+              <div class="mediaHover-content">
+                <button mat-fab class="btn-actions">
+                  <mat-icon class="mat-18" routerLink="/video"
+                    >play_arrow</mat-icon
+                  >
+                </button>
+                <button mat-icon-button>
+                  <mat-icon class="mat-18">favorite</mat-icon>
+                </button>
+                <button mat-icon-button>
+                  <mat-icon class="mat-18" (click)="openDialogAddPlaylist()"
+                    >playlist_add</mat-icon
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-template>
-  </swiper>
+      </ng-template>
+    </swiper>
+  </div>
 </div>
 
 <ng-template #templateDialogAddPlaylist>
@@ -92,4 +94,11 @@
     <div><mat-checkbox>SWU</mat-checkbox></div>
     <div><mat-checkbox>MCU</mat-checkbox></div>
   </section>
+  <mat-divider></mat-divider>
+  <button mat-button>
+    <div class="btn-wIconCenter">
+      <mat-icon class="mat-18">add</mat-icon>
+      <span>Criar nova playlist</span>
+    </div>
+  </button>
 </ng-template>
